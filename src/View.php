@@ -59,8 +59,6 @@ class View extends \yii\web\View
         $filters = [
             // remove javascript comments
             '/(?:<script[^>]*>|\G(?!\A))(?:[^\'"\/<]+|"(?:[^\\"]+|\\.)*"|\'(?:[^\\\']+|\\.)*\'|\/(?!\/)|<(?!\/script))*+\K\/\/[^\n|<]*/xsu' => '',
-            // remove html comments except IE conditions
-            '/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/su' => '',
             // remove comments in the form /* */
             '/\/+?\s*\*[\s\S]*?\*\s*\/+/u' => '',
             // shorten multiple white spaces
